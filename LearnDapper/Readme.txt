@@ -45,10 +45,30 @@ Create a DBContext Class to establish connection between SQL Server and applicat
 	with the help of constructor.
 	Create a new SqlConnection Object to hold Sql connection CreateConnection Method. (Import necessary namespace)
 
+Now Register DBContext Class in to service container of Programme.cs File.
+
+builder.Services.AddTransient<DapperDBContext>();
+
 ---------------------------------------------------------------------------------------------------------------------------
 
+Create A Repository to hold the data
+
+Create a EmployeeRepo.cs class and IEmployeeRepo.cs interface to hold the data receive from SQL Database
+
+Declare a method below in the interface and implement in EmployeeRepo Class.
+
+IEmployeeRepo.cs
+
+Task<List<Employee>> GetAll();
 
 
+EmployeeRepo.cs Class
+
+Inject DapperDB Class in the constructor of EmployeeRepo Class and hold the value of dbcontext in private variable.
+
+Register IEmployee Interface and EmployeeRepo Class in the programme.cs file to add dependancies.
+
+builder.Services.AddTransient<IEmployeeRepo, EmployeeRepo>();
 
 
 

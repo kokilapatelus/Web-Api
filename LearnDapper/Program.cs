@@ -1,8 +1,13 @@
+using LearnDapper.Model.Data;
+using LearnDapper.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddTransient<DapperDBContext>();
+builder.Services.AddTransient<IEmployeeRepo, EmployeeRepo>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
