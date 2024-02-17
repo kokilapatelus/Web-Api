@@ -4,7 +4,6 @@ using LearnAPI.Helper;
 using LearnAPI.Repos;
 using LearnAPI.Service;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<LeanrnContextb>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("apiconn")));
 builder.Services.AddScoped<ICustomerService, CustomerService>();
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
 builder.Services.AddAuthorization();
 
 builder.Services.AddSwaggerGen();
