@@ -1,0 +1,1 @@
+﻿There is a button at the top of the Solution Explorer called "Show All Files". To see this button, make sure that your project is selected in the solution explorer. When this option is active, the file should be there, just grayed out. Right click it, and select "Include In Project
