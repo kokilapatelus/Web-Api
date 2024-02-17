@@ -11,6 +11,13 @@ It will open Git Changes menu.  Now Click on Plus item next to Changes to move a
 
 Once staged, write a message and click on Commit Staged Button.
 
+Now Click a UpArrow(Push) to Remote branch.
+
+
+Go to Github.com and Create a pull request and merge the branch in to master branch.
+
+
+
 
 
 
