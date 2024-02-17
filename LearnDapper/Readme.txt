@@ -1,6 +1,5 @@
 ﻿How to Commit Changes on GitHub Repository in Visual Studio.
 
-
 Clone the Repository
 
 On Project in Solution, Right Click and Select Git Option.
@@ -13,17 +12,7 @@ Once staged, write a message and click on Commit Staged Button.
 
 Now Click a UpArrow(Push) to Remote branch.
 
-
 Go to Github.com and Create a pull request and merge the branch in to master branch.
-
-
-
-
-
-
-
-
-
 
 ----------------------------------------------------------------------------------------------------------------
 How to Copy SQL Script File into Database
