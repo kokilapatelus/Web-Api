@@ -5,7 +5,7 @@ namespace LearnDapper.Model.Data
 {
     public class DapperDBContext
     {
-        private readonly IConfiguration? _configuration;
+        private readonly IConfiguration _configuration;
         private readonly string connectionstring;
         public DapperDBContext(IConfiguration configuration)
         {
