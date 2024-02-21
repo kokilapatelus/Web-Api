@@ -18,9 +18,27 @@ namespace LearnAPI.Container
             _mapper = mapper;   
         }
 
-        public Task<APIresponse> Create(CustomerModel model)
+        public async Task<APIresponse> Create(CustomerModel data)
         {
-            throw new NotImplementedException();
+            APIresponse response = new APIresponse();
+            try
+            {
+                TblCustomer _customer = this._mapper.Map<CustomerModel,TblCustomer>(data);
+                await this._context.TblCustomers.AddAsync(_customer);
+                await this._context.SaveChangesAsync();
+                response.ResponseCode = 201;
+                response.Result = data.Code;
+
+            }
+            catch (Exception ex)
+            {
+                response.ResponseCode = 400;
+                response.ErrorMessage = ex.Message;
+                
+            }
+            return response;
+
+
         }
 
         public  async Task<List<CustomerModel>> Getall()
